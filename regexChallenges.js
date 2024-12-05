@@ -6,4 +6,4 @@ function isValidEmail(emailAddress) {
         return "Invalid Email"
     }
 }
-console.log(isValidEmail("sexybanana-3@banana-mail.co"));
+console.log(isValidEmail("sexybanana-5@banana-mail.co"));
