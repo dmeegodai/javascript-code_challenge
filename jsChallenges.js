@@ -62,8 +62,8 @@ function createMultiplier(n){
     return secondFuncion;
 
 }
-const createMultiplier2 = createMultiplier(2);
-console.log(createMultiplier2.secondFuncion(5));
+//const createMultiplier2 = createMultiplier(2);
+//console.log(createMultiplier2.secondFuncion(5));
 
 
 
