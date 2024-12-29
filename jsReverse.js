@@ -21,11 +21,7 @@ function reverseFunction(string) {
 
 //console.log(reverseFunction("Bio-Oil"));
 
-function reverseSentence(string){
-    return string.trim().split(" ").reverse().join(" ");
-}
 
-console.log(reverseSentence("    JavaScript     is awesome"));
 
 
 
