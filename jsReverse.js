@@ -21,6 +21,26 @@ function reverseFunction(string) {
 
 //console.log(reverseFunction("Bio-Oil"));
 
+function reverseStringFunction(String){
+   let newString="";
+    for(let i =String.length-1; i >=0; i--) {
+        newString = newString + String[i];
+    }
+    return newString;
+}
+
+//console.log(reverseStringFunction("My name is Motrolla"));
+
+function reverseArray(arr){
+    newArray= [];
+    for(let i= arr.length-1; i>=0; i--){
+        newArray.push(arr[i]) 
+     }
+   return newArray;
+}
+
+console.log(reverseArray([2,2,1,2,6,2,5]));
+
 
 
 

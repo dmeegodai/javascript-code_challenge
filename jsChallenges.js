@@ -71,10 +71,10 @@ function createMultiplier(n){
 function reverseAction(arr) {
     const newArry = [];
     for(let i =arr.length-1; i >= 0; i--){
-        newArry[0] = arr[i];
+        //newArry[0] = arr[i];
         newArray.push(arr[i]);
     }
     return newArry;     
-    arr[0] =5;   
+    //arr[0] =5;   
 }
 //new Arry [0]= 3;
