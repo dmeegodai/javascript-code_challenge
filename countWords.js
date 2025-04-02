@@ -4,7 +4,7 @@ function countWords(str) {
     console.log(wordCount);
 }
 
-countWords("JavaScript is awesome");
+//countWords("JavaScript is awesome");
 
 function countWordsExt(str) {
     str = str.trim();
@@ -18,4 +18,24 @@ function countWordsExt(str) {
     console.log(wordCount);
 }
 
-countWordsExt("  I love coding challenges");
+//countWordsExt("  I love coding challenges");
+
+function compressString(str) {
+    let result = [];
+    let count = 1;
+
+    for(let i = 1; i <= str.length; i++) {
+        if(str[i] === str[i - 1]){
+            count++
+        }else {
+            result.push(str[i-1] + count);
+            count = 1;
+        }
+    }
+    let compressedString = result.join("");
+    return compressedString.length < str.length ? compressedString : str;
+}
+//console.log(compressString("aaabccddddee"));
+//console.log(compressString("abc"));
+
+
