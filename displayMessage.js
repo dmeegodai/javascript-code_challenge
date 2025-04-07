@@ -3,3 +3,4 @@ function displayMessage() {
   //alert("JavaScript is amazing!");
 }
 displayMessage();
+

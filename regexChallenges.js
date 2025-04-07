@@ -18,4 +18,14 @@ function isValidPhoneNummer(nummer){
         return "Invalid Telefonenummer";
     }
 }
-console.log(isValidPhoneNummer("+94-772-212-625"))
+//console.log(isValidPhoneNummer("+94-772-212-625"))
+
+function isValidTestCaseId(testId) {
+    const regex = /^TC-\d{3,5}(-\d{1,2})?$/
+    if(regex.test(testId)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log( isValidTestCaseId("TC-99999-02"));
