@@ -15,12 +15,27 @@ function returnMostFrequentValue(arr) {
   }
   return mostFrequent;
 }
-arr = [1,2,2,4,5,1,2,5,5];
+arr = [1, 2, 2, 4, 5, 1, 2, 5, 5];
 //console.log(returnMostFrequentValue(arr));
 
-function arrayConvert(arr){
+function arrayConvert(arr) {
   let flattedArray = [];
   flattedArray = arr.flat(Infinity);
   return flattedArray;
 }
- console.log(arrayConvert([1, 2, [3, 4], [5, [6, 7]]]));
+//console.log(arrayConvert([1, 2, [3, 4], [5, [6, 7]]]));
+
+function arrayConvertNew(arr) {
+  let flattedArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      flattedArray.push(arr[i]);
+    } else if (Array.isArray(arr[i])) {
+      let elements = arrayConvertNew(arr[i]);
+    flattedArray.push(...elements);
+    }
+  }
+  return flattedArray;
+}
+
+console.log(arrayConvert([1, 2, [3, 4], [5, [6, 7]]]));
