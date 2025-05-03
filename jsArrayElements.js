@@ -32,10 +32,30 @@ function arrayConvertNew(arr) {
       flattedArray.push(arr[i]);
     } else if (Array.isArray(arr[i])) {
       let elements = arrayConvertNew(arr[i]);
-    flattedArray.push(...elements);
+      flattedArray.push(...elements);
     }
   }
   return flattedArray;
 }
 
-console.log(arrayConvert([1, 2, [3, 4], [5, [6, 7]]]));
+//console.log(arrayConvert([1, 2, [3, 4], [5, [6, 7]]]));
+
+function findDuplicates(arr) {
+  let counts = new Map();
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (counts.has(arr[i])) {
+      counts.set(arr[i], counts.get(arr[i]) + 1);
+    } else {
+      counts.set(arr[i], 1);
+    }
+  }
+  for (let [key, value] of counts) {
+    if (value > 1) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+console.log(findDuplicates([2,1,3,2,3,2,4,5,6,3,5]));
