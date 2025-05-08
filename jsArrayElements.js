@@ -58,4 +58,16 @@ function findDuplicates(arr) {
   return result;
 }
 
-console.log(findDuplicates([2,1,3,2,3,2,4,5,6,3,5]));
+//console.log(findDuplicates([2,1,3,2,3,2,4,5,6,3,5]));
+
+function countStatusCodes(arr){
+    let counts = new Map();
+    for(let i = 0; i < arr.length; i++){
+      if(counts.has(arr[i])){
+        counts.set(arr[i], counts.get(arr[i]) + 1);
+      } else {
+        counts.set(arr[i], 1);
+      }
+    }
+    return counts;
+}
