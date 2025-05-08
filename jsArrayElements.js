@@ -71,3 +71,17 @@ function countStatusCodes(arr){
     }
     return counts;
 }
+//console.log(countStatusCodes([200, 200, 404, 500, 200, 401, 500, 404, 200]));
+
+function getFailures(arr) {
+  //let count = new Map();
+  let results = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] >= 400){
+      results.push(arr[i]);
+    }
+  } 
+  return results;
+}
+console.log(getFailures([200, 201, 404, 500, 502]));
+
