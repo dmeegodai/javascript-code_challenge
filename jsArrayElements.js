@@ -83,5 +83,15 @@ function getFailures(arr) {
   } 
   return results;
 }
-console.log(getFailures([200, 201, 404, 500, 502]));
+//console.log(getFailures([200, 201, 404, 500, 502]));
 
+function indFirstFailure(arr) {
+  for(let i=0; i <= arr.length-1; i++) {
+    if(arr[i] >= 400) {
+      return arr[i];
+    } 
+  }
+  return "No failure found";
+}
+
+console.log(indFirstFailure([200, 201, 404, 500, 502]));
