@@ -120,4 +120,32 @@ function apiDataValidate(arr) {
   return result;
 }
 
-console.log(apiDataValidate(products));
+//console.log(apiDataValidate(products));
+
+const users = [
+  { id: 1, name: "John", roles: [{ roleName: "Admin", accessLevel: 10 }] },
+  { id: 2, name: "", roles: [{ roleName: "Editor", accessLevel: 5 }] },
+  { id: 3, name: "Alice", roles: [] },
+  { id: 4, name: "Bob", roles: [{ roleName: "", accessLevel: 7 }] },
+  { id: 5, name: "Eve", roles: [{ roleName: "Viewer", accessLevel: 15 }] },
+];
+
+function validateUsers(users) {
+  let results = [];
+  for (userElement of users) {
+    const { id, name, roles } = userElement;
+    if (!name || roles.length === 0) {
+      results.push(id);
+      continue;
+    }
+    for (roleElements of roles) {
+      const { roleName, accessLevel } = roleElements;
+      if (!roleName || accessLevel < 1 || accessLevel > 10) {
+        results.push(id);
+        break;
+      }
+    }
+  }
+  return results;
+}
+console.log(validateUsers(users));
