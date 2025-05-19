@@ -34,4 +34,54 @@ function compareApiResponses(apiV1Response, apiV2Response) {
   }
 }
 
-console.log(compareApiResponses(apiV1Response, apiV2Response));
+//console.log(compareApiResponses(apiV1Response, apiV2Response));
+
+const apiV1 = {
+  id: 101,
+  name: "Smartphone",
+  price: 299.99,
+  description: "Latest model with 5G"
+};
+
+const apiV2 = {
+  id: 101,
+  name: "Smartphone",
+  price: 300.02,
+  description: "Latest model with 5G and AI features",
+  stock: 50
+};
+
+compareApiResponses(apiV1, apiV2) {
+  const finalResults = {
+    missingFields: [],
+    newFields: [],
+    valueMismatches: [],
+  }
+    const v1Keys = Object.keys(apiV1);
+    const v2Keys = Object.keys(apiV2);
+
+    for(const key of v1Keys){
+      if(!v2Keys.includes(key)) {
+        finalResults.missingFields.push(key);
+      }
+    }
+    for(const key of v2Keys){
+      if(!v1Keys.includes(key)) {
+        finalResults.newFields.push(key);
+      }
+    }
+    for(const key of v1Keys){
+      if(v2Keys.includes(key)){
+        const v1Value = apiV1[key];
+        const v2Vlue = apiV2[key];
+      }
+    }
+
+
+
+
+
+
+
+
+}
