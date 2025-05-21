@@ -77,7 +77,7 @@ function compareApiResponses(apiV1, apiV2) {
       const v2Value = apiV2[key];
 
       if (typeof v1Value === "number" && typeof v2Value === "number") {
-        if (Math.abs(v1Value - v2Value) > 0.1) {
+        if (Math.abs(v1Value - v2Value) > 0.01) {
           finalResults.valueMismatches.push({
             key,
             apiV1: v1Value,
@@ -86,7 +86,7 @@ function compareApiResponses(apiV1, apiV2) {
         }
       }
       if (typeof v1Value === "string" && typeof v2Value === "string") {
-        if (!v1Value === v2Value) {
+        if (v1Value !== v2Value) {
           finalResults.valueMismatches.push({
             key,
             apiV1: v1Value,
