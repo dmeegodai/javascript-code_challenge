@@ -98,4 +98,5 @@ function compareApiResponses(apiV1, apiV2) {
   }
   return finalResults;
 }
-console.log(compareApiResponses(apiV1,apiV2));
+//console.log(compareApiResponses(apiV1,apiV2));
+
