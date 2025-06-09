@@ -22,7 +22,6 @@ const actualResponse = {
 
 function validateSchema(expectedSchema, actualResponse){
     const issue = [];
-
     const eKeys = Object.keys(expectedSchema);
     const aKeys = Object.keys(actualResponse);
 
