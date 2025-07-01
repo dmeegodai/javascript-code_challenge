@@ -11,3 +11,4 @@ console.log(isPalindrome("Madam"));
 console.log(isPalindrome("nurses run"));    
 console.log(isPalindrome("hello"));
 
+
